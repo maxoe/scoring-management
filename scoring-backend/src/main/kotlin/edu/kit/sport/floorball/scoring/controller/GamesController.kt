@@ -14,22 +14,23 @@ class GamesController() {
     fun getAllGames(): ResponseEntity<List<Game>> {
         return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).build()
     }
-    @PostMapping("/create")
+
+    @PostMapping
     fun createGame(@RequestBody newGame: Game): ResponseEntity<Game> {
         return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).build()
     }
 
-    @GetMapping("/games/{id}")
+    @GetMapping("/{id}")
     fun getGame(@PathVariable id: Long): ResponseEntity<Game> {
         return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).build()
     }
 
-    @PutMapping("/games/{id}")
+    @PutMapping("/{id}")
     fun updateGame(@RequestBody newGame: Game, @PathVariable id: Long): ResponseEntity<Game> {
         return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).build()
     }
 
-    @DeleteMapping("/games/{id}")
+    @DeleteMapping("/{id}")
     fun deleteGame(@PathVariable id: Long): ResponseEntity<Void> {
         return ResponseEntity.status(HttpStatus.NOT_IMPLEMENTED).build()
     }
