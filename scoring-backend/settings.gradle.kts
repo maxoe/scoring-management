@@ -1,1 +1,2 @@
-rootProject.name = "scoring"
+rootProject.name = "scoring-backend"
+
