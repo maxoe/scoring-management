@@ -6,8 +6,4 @@ import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
 @Entity
-class Game {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
-}
+data class Game (@Id @GeneratedValue(strategy = GenerationType.IDENTITY) val id: Long? = null)
