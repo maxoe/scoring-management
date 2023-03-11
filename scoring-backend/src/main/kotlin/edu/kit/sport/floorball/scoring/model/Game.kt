@@ -4,7 +4,7 @@ import jakarta.persistence.*
 import java.time.Instant
 
 @Entity
-data class Game (
+data class Game(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
@@ -16,7 +16,6 @@ data class Game (
     val teamAway: Team = Team(),
 
     var scheduledAt: Instant = Instant.now(),
-    var started: Instant = Instant.now(),
 
     @OneToMany(
         cascade = [CascadeType.ALL],

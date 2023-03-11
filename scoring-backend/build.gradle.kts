@@ -36,6 +36,12 @@ dependencies {
     implementation("org.postgresql:postgresql:$postgresqlVersion")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion")
     implementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+    implementation("org.postgresql:postgresql:$postgresqlVersion")
+    implementation("org.hsqldb:hsqldb:$hsqldbVersion")
+    implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
 
     developmentOnly("org.springframework.boot:spring-boot-devtools:$springBootVersion")
     testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
