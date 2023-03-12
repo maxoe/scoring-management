@@ -19,14 +19,14 @@ class GamesController(
     }
 
     @PostMapping
-    fun createGame(@RequestBody newGame: Game): ResponseEntity<Game> {
-        try {
-            gamesRepository.save(newGame)
+    fun createGame(@RequestBody newGame: Game): ResponseEntity<Long> {
+        return try {
+            ResponseEntity.status(HttpStatus.CREATED).body(
+                gamesRepository.save(newGame).id
+            )
         } catch (e: IllegalArgumentException) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build()
+            ResponseEntity.status(HttpStatus.BAD_REQUEST).build()
         }
-
-        return ResponseEntity.status(HttpStatus.CREATED).build()
     }
 
     @GetMapping("/{id}")
